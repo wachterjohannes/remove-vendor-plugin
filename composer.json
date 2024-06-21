@@ -1,0 +1,22 @@
+{
+  "name": "asapo/remove-vendor-plugin",
+  "description": "A Composer plugin to remove specific folders after installation or update.",
+  "type": "composer-plugin",
+  "require": {
+    "composer-plugin-api": "^2.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Asapo\\RemoveVendorPlugin\\": "src/"
+    }
+  },
+  "extra": {
+    "class": "Asapo\\RemoveVendorPlugin\\Plugin",
+    "remove-folders": [
+      "modelflow-ai/*/vendor"
+    ]
+  },
+  "require-dev": {
+    "composer/composer": "^2.7"
+  }
+}
